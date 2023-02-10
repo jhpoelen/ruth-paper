@@ -10,7 +10,7 @@ https://link.springer.com/article/10.1007/s12145-011-0083-6
 with history:
 
 ```
-preston history
+preston history --anchor hash://sha256/adb0dd69f96de91ab8dcea77bf07cddf624d724f0660475d37abecf89728aca7 --remote https://linker.bio,https://softwareheritage.org
 ```
 
 
@@ -23,7 +23,7 @@ preston history
 # Tracked Content
 
 ```
-preston alias
+preston alias --anchor hash://sha256/adb0dd69f96de91ab8dcea77bf07cddf624d724f0660475d37abecf89728aca7 --remote https://linker.bio,https://softwareheritage.org
 ```
 
 
@@ -40,7 +40,7 @@ As you can see, the content identifiers for the article provided by springer are
 For the *exact* different between the content we can use the `diff` tool:
 
 ```
-diff <(preston cat hash://sha256/5f10af781752c6b25b4ef9f6fa86ebf99110dd42143175386e273f725e607836) <(preston cat hash://sha256/48214e53efd8901fdb8f9677877ffacf35171d2071e516d43c88d17a648f3502)
+diff <(preston cat --remote https://linker.bio,https://softwareheritage.org hash://sha256/5f10af781752c6b25b4ef9f6fa86ebf99110dd42143175386e273f725e607836) <(preston cat --remote https://linker.bio,https://softwareheritage.org hash://sha256/48214e53efd8901fdb8f9677877ffacf35171d2071e516d43c88d17a648f3502)
 ```
 
 to produce:
